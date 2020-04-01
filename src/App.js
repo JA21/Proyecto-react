@@ -1,54 +1,35 @@
-import React from 'react';
+import React,{Component} from 'react';
 import './App.css';
+import info from './sample/info'
 
 
-// /*function Hellowordl (props){
-// return( 
-// <div id="hello">
-// <h3>{props.subindice}</h3>
-//   {props.texto}
-//   </div>
-// )};**/
+class App extends Component{
+  state = {
+    info:info
 
-class Hellowordl extends React.Component{
-  
-  state={
-    show:true
   }
 
-  mostrar=()=>{
-    this.setState({show: !this.state.show})
-  }
-
-  render(){
-    if(this.state.show){
-    return(
-    <div id="hello">
- <h3>{this.props.subindice}</h3>
-  {this.props.texto}
-  <button onClick={this.mostrar} >Quitar texto</button>
- </div>
-    )
-  }else{
-    return (
-    <div>
-      <h1>No hay elementos</h1>
-      <button onClick={this.mostrar}>Mostrar texto</button>
-    </div>
-    )
-  }
+  render() {
+ return (
+      <div>
+        {this.state.info.map(e=> <p key={e.id}>
+          <h1>Nombre : {e.Nombre}</h1>
+        <h2>Rango: {e.rango}</h2>
+        <p>{e.descripcion}</p>
+        </p>)}
+      </div>
+    );
   }
 }
-
-function App() {
-  return (
-   <div>
-     Este es mi componente:
-      <Hellowordl texto="saludo jorge" subindice="AMO" />
-      <Hellowordl texto="saludo Andres"/>
-      <Hellowordl texto="saludo K"/>
-   </div>
-  );
-}
+// function App() {
+//   return (
+//    <div>
+//      Este es mi componente:
+//       <Hellowordl texto="saludo jorge" subindice="AMO" />
+//       <Hellowordl texto="saludo Andres"/>
+//       <Hellowordl texto="saludo K"/>
+//    </div>
+//   );
+// }
 
 export default App;

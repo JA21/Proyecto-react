@@ -1,0 +1,23 @@
+[
+    {
+        "id":0,
+        "Nombre":"Jorge",
+        "rango":10,
+        "estado":true,   
+        "descripcion":"texto largo"
+},
+{
+    "id":2,
+    "Nombre":"victor",
+    "rango":3,
+    "estado":true,   
+    "descripcion":"texto largo" 
+},
+{
+    "id":0,
+    "Nombre":"kevin",
+    "rango":4,
+    "estado":false,   
+    "descripcion":"texto largo" 
+}
+]
