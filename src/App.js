@@ -8,7 +8,7 @@ class App extends Component{
     info:info
 
   }
-
+//sad
   render() {
  return (
       <div>
