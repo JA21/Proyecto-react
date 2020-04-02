@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import './App.css';
-import info from './sample/info'
-
+import info from './sample/info.json'
+import Info from './Components/Info.js'
 
 class App extends Component{
   state = {
@@ -12,11 +12,7 @@ class App extends Component{
   render() {
  return (
       <div>
-        {this.state.info.map(e=> <p key={e.id}>
-          <h1>Nombre : {e.Nombre}</h1>
-        <h2>Rango: {e.rango}</h2>
-        <p>{e.descripcion}</p>
-        </p>)}
+       <Info info={this.state.info}/>
       </div>
     );
   }
