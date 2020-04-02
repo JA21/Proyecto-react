@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import './info.css';
-class Infos extends Component {
-    render() {
 
+class Infos extends Component {
+
+    stylocompleto(){
+        return{
+        fontSize: '20px',
+        color: this.props.tarea.estado ? 'gray': 'black',
+        textDecoration: this.props.tarea.estado ? 'line-through': 'none'
+    }
+}
+
+    render() {
+       
         const {tarea}=this.props;
         //const redcolor = {Background: 'red'}
-        return <div >
+        return <div style={this.stylocompleto()}>
             <h1>Nombre : {tarea.Nombre}</h1>
             <h2>Rango: {tarea.rango}</h2>
             <p>{tarea.descripcion}</p>

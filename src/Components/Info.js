@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import Infos from './Infos';
 
+
+
 class Info extends Component{
     render(){
 
