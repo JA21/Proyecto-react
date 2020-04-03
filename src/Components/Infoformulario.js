@@ -8,18 +8,18 @@ export default class Infoformulario extends Component{
     }
 
      enviando =e=>{
-         console.log("enviando");
+         this.props.Agregandoinfo(this.state.title,this.state.descr);
         e.preventDefault();
     }
     cambioinput=e=>{
-        console.log(e.target.name, e.target.value);
+        
        this.setState({
            
            [e.target.name]: e.target.value
        })
     }
     render(){
-        this.props.addinfo();
+       
         return (
             <form onSubmit={this.enviando}>
                 <input 

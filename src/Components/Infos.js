@@ -18,9 +18,10 @@ class Infos extends Component {
         
         //const redcolor = {Background: 'red'}
         return <div style={this.stylocompleto()}>
-             {tarea.Nombre}
+             {tarea.title}
              {tarea.rango}
-            {tarea.descripcion}
+            {tarea.descr}
+            {tarea.id}
             <input type="Checkbox" />
             <button style={btnestilo}>
                  x </button>
@@ -37,7 +38,7 @@ Infos.propTypes={
 const btnestilo={
     fontSize:'18px',
     Background: '#ea2027',
-    color: '#fff',
+    color: '#ffff',
     border: 'none',
     padding: '13px 15px',
     borderradius: '30%',

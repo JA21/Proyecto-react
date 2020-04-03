@@ -1,23 +1,23 @@
 [
     {
         "id":0,
-        "Nombre":"Jorge",
+        "title":"Jorge",
         "rango":10,
         "estado":true,   
-        "descripcion":"texto largo"
+        "descr":"texto largo"
 },
 {
     "id":1,
-    "Nombre":"victor",
+    "title":"victor",
     "rango":3,
     "estado":true,   
-    "descripcion":"texto largo" 
+    "descr":"texto largo" 
 },
 {
     "id":2,
-    "Nombre":"kevin",
+    "title":"kevin",
     "rango":4,
     "estado":false,   
-    "descripcion":"texto largo" 
+    "descr":"texto largo" 
 }
 ]

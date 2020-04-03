@@ -1,27 +1,34 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import info from './sample/info.json';
 
 //Importando 
 import Info from './Components/Info.js';
 import Infoformulario from './Components/Infoformulario';
-class App extends Component{
+class App extends Component {
   state = {
-    info:info
-}
+    info: info
+  }
 
- Agregandoinfo=()=>{
-  console.log('agrando nueva info');
- }
+  Agregandoinfo = (title, descr) => {
+    const newinfo = {
+      title: title,
+      descr: descr,
+      id: this.state.info.length
+    }
+    this.setState({
+      info: [...this.state.info, newinfo]
+    })
+  }
 
   render() {
-    
- return (
+
+    return (
       <div>
-        <Infoformulario addinfo={this.Agregandoinfo}/>
-       <Info info={this.state.info}/>
-      </div>
-    );
+        <Infoformulario Agregandoinfo={this.Agregandoinfo} />
+        <Info info={this.state.info} />
+      </div>)
+
   }
 }
 // function App() {
