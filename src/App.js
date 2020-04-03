@@ -6,8 +6,7 @@ import Info from './Components/Info.js'
 class App extends Component{
   state = {
     info:info
-
-  }
+}
 //sad
   render() {
  return (

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './info.css';
+import PropTypes from 'prop-types';
 
 class Infos extends Component {
 
@@ -24,6 +25,11 @@ class Infos extends Component {
         </div>
 
     }
+}
+
+Infos.propTypes={
+    tarea:PropTypes.object
+
 }
 
 const btnestilo={
