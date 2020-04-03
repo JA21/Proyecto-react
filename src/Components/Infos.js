@@ -15,13 +15,15 @@ class Infos extends Component {
     render() {
        
         const {tarea}=this.props;
+        
         //const redcolor = {Background: 'red'}
         return <div style={this.stylocompleto()}>
-            <h1>Nombre : {tarea.Nombre}</h1>
-            <h2>Rango: {tarea.rango}</h2>
-            <p>{tarea.descripcion}</p>
+             {tarea.Nombre}
+             {tarea.rango}
+            {tarea.descripcion}
             <input type="Checkbox" />
-            <button style={btnestilo}> x</button>
+            <button style={btnestilo}>
+                 x </button>
         </div>
 
     }
