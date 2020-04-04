@@ -21,12 +21,28 @@ class App extends Component {
     })
   }
 
+    borrandoinfo=(id)=>{
+      const nuevoinfo=this.state.info.filter(info=>info.id!==id);
+      this.setState({info: nuevoinfo});
+    }
+
+    estadoinfo=(id)=>{
+      const nuevoestado=this.state.info.map(
+        info=>{
+          if(info.id===id){
+            info.estado=!info.estado
+          }
+          return info;
+        });
+        this.setState({info: nuevoestado});
+    }
+
   render() {
 
     return (
       <div>
         <Infoformulario Agregandoinfo={this.Agregandoinfo} />
-        <Info info={this.state.info} />
+        <Info info={this.state.info} borrandoinfo={this.borrandoinfo} estadoinfo={this.estadoinfo}/>
       </div>)
 
   }

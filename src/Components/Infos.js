@@ -22,8 +22,8 @@ class Infos extends Component {
              {tarea.rango}
             {tarea.descr}
             {tarea.id}
-            <input type="Checkbox" />
-            <button style={btnestilo}>
+            <input type="Checkbox" onChange={this.props.estadoinfo.bind(this,tarea.id)}/>
+            <button style={btnestilo} onClick={this.props.borrandoinfo.bind(this, tarea.id)}>
                  x </button>
         </div>
 
