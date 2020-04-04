@@ -5,6 +5,7 @@ import info from './sample/info.json';
 //Importando 
 import Info from './Components/Info.js';
 import Infoformulario from './Components/Infoformulario';
+import Post from './Components/post';
 class App extends Component {
   state = {
     info: info
@@ -42,7 +43,10 @@ class App extends Component {
     return (
       <div>
         <Infoformulario Agregandoinfo={this.Agregandoinfo} />
-        <Info info={this.state.info} borrandoinfo={this.borrandoinfo} estadoinfo={this.estadoinfo}/>
+        <Info info={this.state.info} 
+        borrandoinfo={this.borrandoinfo} 
+        estadoinfo={this.estadoinfo}/>
+        <Post/>
       </div>)
 
   }
